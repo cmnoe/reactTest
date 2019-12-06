@@ -17,7 +17,7 @@ class InputNumber extends React.Component{
             onChange
         } = this.state;
         return (
-            <input value={defaultValue || value } onChange={e => this.setState({value: onChange(e) || e.target.value})} />
+            <input value={defaultValue === undefined ?  value : defaultValue } onChange={e => this.setState({value: onChange(e) || e.target.value})} />
         )
     }
 }
